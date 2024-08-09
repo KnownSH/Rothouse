@@ -1,0 +1,73 @@
+title: Lucy's Gallery
+description: A collection of PinPin's "Lucy" sona art.
+details: 
+cover: ./lucy/PinV2.jpg
+
+artists:
+  ryker: '<a href="https://x.com/SJRykerArt/status/1567290400838225921/photo/1">@SJRykerArt (NSFW)</a>'
+  dovey: '<a href="https://x.com/missdoveyx">@missdoveyx</a>'
+  darter: '<a href="https://x.com/dartiros">@dartiros</a>'
+  bxmw: '<a href="https://x.com/bxmw">@bxmw</a>'
+  viexy: '<a href="https://x.com/viexywashere">@viexywashere</a>'
+  remkual: '<a href="https://x.com/remkual">@remkual</a>'
+  colaberry: '<a href="https://www.fiverr.com/colaberry">@colaberry</a>'
+  ic6pid: '<a href="https://x.com/ic6pid">@ic6pid</a>'
+
+images:
+  Untitled1107_20221224210026: { var: dovey }
+  Untitled920_20220605142435: { var: dovey }
+  CD40AD38-7CEB-4E2B-9DB7-D3A08554311E: { var: dovey }
+  Untitled1109_20221225035909: { var: dovey }
+  Untitled920_20220605154409: { var: dovey }
+  Untitled1482_20230717160111: { var: dovey }
+  Untitled981_20220826202705: { var: dovey }
+  IMG_0208: { var: dovey }
+  Untitled1550_20240115055308: { var: dovey }
+  IMG_0211: { var: dovey }
+  Untitled1007_20220926050015: { var: dovey }
+  IMG_0214 copy: { var: dovey }
+  Untitled100_20220919212321: { var: dovey }
+  IMG_0214: { var: dovey }
+  Untitled1016_20220929193957: { var: dovey }
+  pin_commissions_20230111165856: { var: dovey }
+  Untitled401_20240511121411: { var: dovey }
+  Untitled101_20220919231636: { var: dovey }
+  IMG_0224: { var: dovey }
+  IMG_0232: { var: dovey }
+  Untitled1062_20221207143001: { var: dovey }
+  IMG_3620: { var: dovey }
+  Untitled1066_20221208103028: { var: dovey }
+  pinwin_ref_20240422150419: { var: dovey }
+  Untitled10_20230901200937: { var: dovey }
+  IMG_6169: { var: dovey }
+ 
+  149_sin_titulo_Restaurado_20231212225944: { var: bxmw }
+  IMG_20220827_235747: { var: bxmw }
+  IMG_20220829_150153: { var: bxmw }
+
+  IMG_0993: { var: darter }
+  PinV2: { var: ryker, alt: dog }
+  Untitled_332: { artist: '<a href="https://x.com/SammyDrawss">@SammyDrawss</a>' }
+  doveypin: { artist: Colin }
+  lesbians: { var: ic6pid }
+  lucyyy: { artist: PinnyPin }
+  pinkerman1: { artist: PinnyPin }
+  Untitled329_20221003220421: { var: remkual }
+  Untitled715_20230119213621: { var: colaberry }
+
+  IMG_8260: { var: viexy }
+  IMG_8392: { var: viexy }
+  IMG_9882: { var: viexy }
+  cachedImage: { var: viexy }
+  Screenshot 2023-01-29 at 11: { var: viexy }
+  Untitled29_20220131200306: { var: viexy }
+  Untitled29_20221019000020 copy: { var: viexy }
+  IMG_2607: { var: viexy }
+  IMG_2611: { var: viexy }
+  IMG_0325: { var: viexy }
+
+  IMG_1772: { artist: jay }
+  IMG_1905: { artist: jay }
+  IMG_2726: { artist: jay }
+
+  Dovey_EJs_Chibi_-_squirrel: { artist: '<a href="https://x.com/KoffeeKoffin">@KoffeeKoffin</a>' }

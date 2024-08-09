@@ -4,4 +4,5 @@ cover: ./known/known_shrug.png
 usual_artist: KnownSH
 
 images:
-  known_shrug.png: { alt: A picture of Known Shrugging, artist: KnownSH }
+  known_shrug: { alt: A picture of Known Shrugging }
+  BannerTEst: { alt: A banner }

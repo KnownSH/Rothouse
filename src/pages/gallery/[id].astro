@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import { getAlbumImages } from "../../utils/albums";
 import { ViewTransitions } from "astro:transitions";
+//import { Markdown } from '@astropub/md'
 import RothouseImage from "../../components/RothouseImage.astro";
 import Standard from "../../layouts/Standard.astro";
 import '../../styles/ImageCaption.css'
@@ -37,9 +38,9 @@ const images = await getAlbumImages(album.id);
         {album.data.description}
       </p>
 
-      <div>
-        
-      </div>
+      <p class="text-lg xl:text-2xl my-4">
+        {album.data.markdown}
+      </p>
 
       <div
         class="mx-auto container my-8 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5"

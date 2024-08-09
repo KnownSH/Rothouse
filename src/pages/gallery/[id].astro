@@ -1,0 +1,71 @@
+---
+import { getCollection } from "astro:content";
+import { getAlbumImages } from "../../utils/albums";
+import { Image } from "astro:assets";
+import { ViewTransitions } from "astro:transitions";
+import Standard from "../../layouts/Standard.astro";
+
+export async function getStaticPaths() {
+  const albums = await getCollection("albums");
+
+  const paths = Object.values(albums).map((album) => {
+    return {
+      params: {
+        id: album.id,
+      },
+      props: {
+        album,
+      },
+    };
+  });
+
+  return paths;
+}
+
+const { album } = Astro.props;
+const images = await getAlbumImages(album.id);
+---
+
+<Standard title={`${album.data.title}'s Gallery`}>
+  <ViewTransitions slot="head" />
+  <Fragment slot="body">
+    <div class="text-center my-16 mb-32">
+      <h1 class="text-3xl xl:text-6xl font-bold">
+        {album.data.title}
+      </h1>
+      <p class="text-lg xl:text-2xl my-4">
+        {album.data.description}
+      </p>
+
+      <div
+        class="mx-auto container my-8 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5"
+        id="gallery"
+      >
+        {
+          images.map((image) => (
+            <a
+              class="contents"
+              href={image.src}
+              data-pswp-width={image.width}
+              data-pswp-height={image.height}
+            >
+              <Image
+                src={image}
+                alt={`Image from ${album.data.title} album`}
+                format="avif"
+                quality={50}
+                class="rounded mb-8 border-2 border-transparent hover:border-gray-900 transition-all duration-300 ease-in-out hover:shadow-lg"
+                loading="lazy"
+              />
+            </a>
+          ))
+        }
+      </div>
+
+      <p class="text-lg my-4 text-center">
+        <a href="/" class="text-black hover:underline">Go back →</a>
+      </p>
+    </div>
+    <script src="../../scripts/litebox.js"></script>
+  </Fragment>
+</Standard>

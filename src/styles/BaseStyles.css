@@ -1,0 +1,20 @@
+body {
+  background-color:  rgb(20, 20, 20);
+}
+
+h1, p {
+  color: white;
+}
+
+strong {
+  color: gray;
+}
+
+a {
+  color: #306da7;
+  font-weight: 500;
+}
+
+.pineffect {
+  background: linear-gradient(#ff8495, #ffab84)
+}

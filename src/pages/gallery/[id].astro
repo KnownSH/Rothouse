@@ -4,6 +4,7 @@ import { getAlbumImages } from "../../utils/albums";
 import { Image } from "astro:assets";
 import { ViewTransitions } from "astro:transitions";
 import Standard from "../../layouts/Standard.astro";
+import '../../styles/ImageCaption.css'
 
 export async function getStaticPaths() {
   const albums = await getCollection("albums");
@@ -51,7 +52,15 @@ const images = await getAlbumImages(album.id);
             >
               <Image
                 src={image}
-                alt={`Image from ${album.data.title} album`}
+                alt={
+                  (album.data.images[image.src.split('/').pop()?.split('?')[0] 
+                    ?? 'invalid']?.alt  
+                    || "No description provided"
+                  ) + `
+                    <br><strong> Artist: </strong>
+                    ${album.data.images[image.src.split('/').pop()?.split('?')[0] ?? 'invalid']?.artist ?? album.data.usual_artist ?? 'Unknown'}
+                  `
+                }
                 format="avif"
                 quality={50}
                 class="rounded mb-8 border-2 border-transparent hover:border-gray-900 transition-all duration-300 ease-in-out hover:shadow-lg"
@@ -63,9 +72,33 @@ const images = await getAlbumImages(album.id);
       </div>
 
       <p class="text-lg my-4 text-center">
-        <a href="/" class="text-black hover:underline">Go back →</a>
+        <a href="/" class="text-white hover:underline">Go back →</a>
       </p>
     </div>
-    <script src="../../scripts/litebox.ts"></script>
+    <script>
+      import "photoswipe/style.css";
+      import pswpModule from "photoswipe";
+      import PhotoSwipeLightbox from "photoswipe/lightbox";
+      import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
+
+      const lightbox = new PhotoSwipeLightbox({
+        pswpModule,
+        childSelector: '.pswp-gallery__item',
+        children: "a",
+        gallery: "#gallery",
+      });
+
+      const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+        type: 'below',
+      });
+
+      document.addEventListener(
+        "astro:page-load",
+        () => {
+          if (lightbox) lightbox.init();
+        },
+        { once: false }
+      );
+    </script>
   </Fragment>
 </Standard>

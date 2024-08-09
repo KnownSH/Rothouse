@@ -7,6 +7,12 @@ const albums = defineCollection({
       title: z.string(),
       description: z.string().optional(),
       cover: image(),
+      usual_artist: z.string().optional(),
+
+      images: z.record(z.string(), z.object({
+        alt: z.string().optional(),
+        artist: z.string().optional()
+      }))
     }),
 });
 

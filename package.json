@@ -15,6 +15,7 @@
     "@julian_cataldo/astro-lightbox": "^0.10.11",
     "astro": "^4.13.2",
     "photoswipe": "^5.4.4",
+    "photoswipe-dynamic-caption-plugin": "^1.2.7",
     "tailwindcss": "^3.4.9",
     "typescript": "^5.5.4"
   },
